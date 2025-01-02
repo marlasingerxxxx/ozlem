@@ -1453,6 +1453,8 @@ self.C3_ExpressionFuncs = [
 		() => "zipla",
 		() => 4,
 		() => 360,
+		() => "oyunsesi",
+		() => 0.2,
 		() => -10,
 		() => "palmiyetek",
 		() => 400,
@@ -1465,7 +1467,8 @@ self.C3_ExpressionFuncs = [
 		() => "tabelaara",
 		() => 638,
 		() => 1.5,
-		() => "intro"
+		() => "intro",
+		() => "bitis"
 ];
 
 

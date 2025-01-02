@@ -24,9 +24,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Behaviors.Platform.Acts.SetEnabled,
 		C3.Plugins.Audio.Acts.UnloadAudioByName,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Audio.Acts.SetPaused,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
-		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
@@ -41,8 +43,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetLayerInteractive,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Audio.Acts.PlayAtObjectByName,
-		C3.Behaviors.Tween.Acts.TweenOneProperty,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Behaviors.Tween.Acts.TweenOneProperty
 	];
 };
 self.C3_JsPropNameTable = [
@@ -68,6 +71,11 @@ self.C3_JsPropNameTable = [
 	{onyaprak: 0},
 	{Sinüs: 0},
 	{tabela: 0},
+	{start: 0},
+	{bitiskalem: 0},
+	{bitiscetvel: 0},
+	{replay: 0},
+	{bitisparsomen: 0},
 	{zemin: 0},
 	{Platform: 0},
 	{ÜzerindeKaydır: 0},
@@ -84,9 +92,17 @@ self.C3_JsPropNameTable = [
 	{Ses: 0},
 	{Döşeme: 0},
 	{MetinGirişi: 0},
-	{Sprite2: 0},
+	{MetinGirişi2: 0},
+	{acikkapi: 0},
+	{kilitlikapi: 0},
+	{DöşemeliArkaplan2: 0},
+	{kalemtik: 0},
+	{cetveltik: 0},
 	{kalem2bool: 0},
-	{kalembool: 0}
+	{kalembool: 0},
+	{kapiacmak: 0},
+	{kalemskor: 0},
+	{cetvelskor: 0}
 ];
 
 self.InstanceType = {
@@ -107,6 +123,11 @@ self.InstanceType = {
 	oncali: class extends self.ISpriteInstance {},
 	onyaprak: class extends self.ISpriteInstance {},
 	tabela: class extends self.ISpriteInstance {},
+	start: class extends self.ISpriteInstance {},
+	bitiskalem: class extends self.ISpriteInstance {},
+	bitiscetvel: class extends self.ISpriteInstance {},
+	replay: class extends self.ISpriteInstance {},
+	bitisparsomen: class extends self.ISpriteInstance {},
 	zemin: class extends self.ITilemapInstance {},
 	Sprite: class extends self.ISpriteInstance {},
 	Klavye: class extends self.IInstance {},
@@ -121,5 +142,10 @@ self.InstanceType = {
 	Ses: class extends self.IInstance {},
 	Döşeme: class extends self.ITilemapInstance {},
 	MetinGirişi: class extends self.ITextInputInstance {},
-	Sprite2: class extends self.ISpriteInstance {}
+	MetinGirişi2: class extends self.ITextInputInstance {},
+	acikkapi: class extends self.ISpriteInstance {},
+	kilitlikapi: class extends self.ISpriteInstance {},
+	DöşemeliArkaplan2: class extends self.ITiledBackgroundInstance {},
+	kalemtik: class extends self.ISpriteInstance {},
+	cetveltik: class extends self.ISpriteInstance {}
 }
